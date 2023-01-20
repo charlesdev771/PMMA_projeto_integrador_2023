@@ -20,9 +20,22 @@
 /*ABOUT*/
 
     #about { width: 100%;}
+    #text_i 
+    {
+        width: 50%;
+        text-justify: center;
+    }
     @media  (max-width: 800px)
     {
         #about h1 {margin-top: -200px;}
+    }
+
+    /*Prevention */
+
+    #text_prevention1
+    {
+        font-size: 25px; 
+        text-align: justify;
     }
 
 /*NEWSLETTER*/
@@ -35,7 +48,10 @@
 /*FOOTER*/
 
 footer {background-color: #333;}
-
+@media  (max-width: 800px)
+{
+    footer {background-color: #333; margin-top: 500px;}
+}
 
 /***************************************************/
 
