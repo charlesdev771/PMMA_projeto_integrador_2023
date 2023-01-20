@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from database import db
 from flask_migrate import Migrate
 from usuarios import bp_usuarios
+from models import Comments
 
 app = Flask(__name__)
 
@@ -22,7 +23,8 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    comments = Comments.query.all()
+    return render_template('about.html', comments=comments)
 
 @app.route('/prevention')
 def prevention():

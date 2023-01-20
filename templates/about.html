@@ -271,6 +271,44 @@
 
     <!--End about Us-->
 
+    <!--Beginning Comments-->
+
+
+    <div id="COMMENTS" class="COMMENTS">
+        <div id="comments" class="comments">
+                <div class="container-fluid">
+                    <div class="col-sm-12 col-md-6 col-lg-3 ml-2 mt-5">
+                    <form action="usuarios/comments" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="my_name" placeholder="Seu nome">
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email (Não aparece para o público)</label>
+                          <input type="email" class="form-control" name="email" placeholder="email">
+                        </div>
+                        <textarea class="form-control" placeholder="Seu comentário" name="comment"> </textarea>
+                        <button type="submit" class="btn btn-primary mt-3">Comentar</button>
+                      </form>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-12 pb-4">
+                            <h3 class="mt-5 mb-5">Comentários</h3>
+                            {% for c in comments %}
+                            <hr>
+                                <div class="comment mt-4 text-justify">
+                                    <h4>{{c.name}}</h4>
+                                    <p>{{c.comment}}</p>
+                                </div>
+                            <hr>
+                            {%endfor%}
+                    </div>
+            </div>
+    </div>
+
+
 
     <!--Beginning footer-->
 

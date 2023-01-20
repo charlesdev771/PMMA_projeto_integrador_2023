@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import render_template, request, redirect
-from models import Usuario, Newsletter
+from models import Usuario, Newsletter, Comments
 from database import db
 
 bp_usuarios = Blueprint('usuarios', __name__, template_folder='templates')
@@ -25,30 +25,36 @@ def create():
 
 @bp_usuarios.route('/newsletter', methods=['GET', 'POST'])
 def newsletter():
-    if request.method == 'GET':
-        return render_template('usuarios_create.html')
+    
+    try:
+    
+        if request.method == 'POST':
+            newsletter = request.form.get('newsletter')
 
-    if request.method == 'POST':
-        newsletter = request.form.get('newsletter')
+            n = Newsletter(newsletter)
+            db.session.add(n)
+            db.session.commit()
+            return redirect('http://127.0.0.1:5000')
 
-        n = Newsletter(newsletter)
-        db.session.add(n)
-        db.session.commit()
+    
+    except Exception as error:
+        
+        print(error)
 
-        return 'dados :)'
+
 
 
 
 @bp_usuarios.route('/comments', methods=['GET', 'POST'])
-def newsletter():
-    if request.method == 'GET':
-        return render_template('usuarios_create.html')
+def comments():
 
     if request.method == 'POST':
-        newsletter = request.form.get('newsletter')
-
-        n = Newsletter(newsletter)
-        db.session.add(n)
+        name = request.form.get('my_name')
+        email = request.form.get('email')
+        comment = request.form.get('comment')
+        
+        c = Comments(name, email, comment)
+        db.session.add(c)
         db.session.commit()
 
         return 'dados :)'

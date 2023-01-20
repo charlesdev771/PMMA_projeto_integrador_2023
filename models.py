@@ -27,12 +27,12 @@ class Newsletter(db.Model):
 class Comments(db.Model):
   __tablename__='comments'
   id = db.Column(db.Integer, primary_key=True)
-  nome = db.Column(db.String(100))
+  name = db.Column(db.String(100))
   email = db.Column(db.String(100))
   comment = db.Column(db.String(300))
 
-  def __init__(self, nome, email, comment):
-    self.nome = nome
+  def __init__(self, name, email, comment):
+    self.name = name
     self.email = email
     self.comment = comment
   
