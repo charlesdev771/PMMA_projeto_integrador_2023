@@ -38,6 +38,34 @@
         text-align: justify;
     }
 
+
+    @media  (max-width: 800px)
+{
+    #text_causes
+    {
+        width: 100%;
+    }
+    #text_information
+    {
+        width: 100%;
+    }
+}
+
+@media  (min-width: 800px)
+{
+    #text_causes
+    {
+        width: 70%;
+    }
+
+    .text_information
+    {
+        width: 70%;
+    }
+}
+
+
+
 /*NEWSLETTER*/
 
     #newsletter { height: 500px; display:flex; align-items: center; align-self: center;}

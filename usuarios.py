@@ -47,17 +47,25 @@ def newsletter():
 
 @bp_usuarios.route('/comments', methods=['GET', 'POST'])
 def comments():
-
-    if request.method == 'POST':
-        name = request.form.get('my_name')
-        email = request.form.get('email')
-        comment = request.form.get('comment')
+    
+    try:
         
-        c = Comments(name, email, comment)
-        db.session.add(c)
-        db.session.commit()
+        if request.method == 'POST':
+            name = request.form.get('my_name')
+            email = request.form.get('email')
+            comment = request.form.get('comment')
+        
+            c = Comments(name, email, comment)
+            db.session.add(c)
+            db.session.commit()
 
-        return 'dados :)'
+            return redirect('http://127.0.0.1:5000/about')
+        
+    except Exception as error:
+        
+        print(error)
+
+
 
 
 
