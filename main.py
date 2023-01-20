@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from database import db
 from flask_migrate import Migrate
 from usuarios import bp_usuarios
@@ -17,7 +17,27 @@ migrate = Migrate(app, db)
 
 @app.route('/')
 def index():
-    return 'Hello from Flask!'
+    return render_template('index.html') 
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/prevention')
+def prevention():
+    return render_template('prevention.html')
+
+@app.route('/causes')
+def causes():
+    return render_template('causes.html')
+
+@app.route('/types')
+def types():
+    return render_template('types.html')
+
+@app.route('/treatment')
+def treatment():
+    return render_template('treatment.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=81)

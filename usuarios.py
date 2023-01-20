@@ -1,4 +1,5 @@
-from flask import Blueprintfrom flask import render_template, request, redirect
+from flask import Blueprint
+from flask import render_template, request, redirect
 from models import Usuario
 from database import db
 
