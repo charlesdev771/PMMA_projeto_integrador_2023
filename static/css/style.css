@@ -1,6 +1,6 @@
 /*MENU HEADER*/
 
-    #icon { width: 110px; height: 110px;}
+    #icon { width: 60px; height: 60px;}
     .menu_item {color: #fff; font-size: 25px; padding: 10px 10px; text-decoration: none;}
     .menu_item:hover{font-size: 33px; color: rgb(0, 0, 0); text-decoration: none;}
     @media (max-width: 800px)
