@@ -5,13 +5,14 @@ from usuarios import bp_usuarios
 
 app = Flask(__name__)
 
-conexao = 'sqlite:///meubanco.sqlite'
+conexao = 'sqlite:///teste.sqlite3'
 
-app.config['SECRET_KEY'] = 'chave'
-app.config['SQLALCHEMY_DATABASE_URI'] = conexao
+app.config['SECRET_KEY'] = 'sisahujsagbgbsabhjfhsafh'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///teste.sqlite3"
+db.init_app(app)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.register_blueprint(bp_usuarios, url_prefix='/usuarios')
-db.init_app(app)
 
 migrate = Migrate(app, db)
 

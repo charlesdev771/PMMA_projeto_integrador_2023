@@ -1,6 +1,6 @@
 from flask import Blueprint
 from flask import render_template, request, redirect
-from models import Usuario
+from models import Usuario, Newsletter
 from database import db
 
 bp_usuarios = Blueprint('usuarios', __name__, template_folder='templates')
@@ -18,6 +18,37 @@ def create():
 
         u = Usuario(nome, email, senha)
         db.session.add(u)
+        db.session.commit()
+
+        return 'dados :)'
+    
+
+@bp_usuarios.route('/newsletter', methods=['GET', 'POST'])
+def newsletter():
+    if request.method == 'GET':
+        return render_template('usuarios_create.html')
+
+    if request.method == 'POST':
+        newsletter = request.form.get('newsletter')
+
+        n = Newsletter(newsletter)
+        db.session.add(n)
+        db.session.commit()
+
+        return 'dados :)'
+
+
+
+@bp_usuarios.route('/comments', methods=['GET', 'POST'])
+def newsletter():
+    if request.method == 'GET':
+        return render_template('usuarios_create.html')
+
+    if request.method == 'POST':
+        newsletter = request.form.get('newsletter')
+
+        n = Newsletter(newsletter)
+        db.session.add(n)
         db.session.commit()
 
         return 'dados :)'
