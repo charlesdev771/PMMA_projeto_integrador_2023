@@ -181,51 +181,91 @@
         </div>
     </div>
 
-    
-    <div id="ABOUTPROJECT" class="ABOUTPROJECT">
-        <div id="aboutproject" class="aboutproject">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 col-md-9">
-                        <h1 class="text-left text-dark mt-5">
-                            Tipos:  
-                        </h1>
 
-                        <h4 class="text-left text-dark ml-3">Transtorno Obsessivo Compulsivo (TOC)</h4>
-                        <p class="ml-5">Ações repetitivas, rituais e manias que temos e 
-                            que quando nos prejudicam tornam-se um problema.
-                        </p>
-                        <h4 class="text-left text-dark ml-3">Transtorno de Ansiedade Generalizada (TAG)</h4>
-                        <p class="ml-5">A pessoa não consegue relaxar, pois apresenta preocupação excessiva 
-                            com a vida e em relação a tudo que envolve sua rotina muito comum em alunos, professores e profissionais como um todo.
-                        </p>
-                        <h4 class="text-left text-dark ml-3">Ansiedade por estresse pós-traumático</h4>
-                        <p class="ml-5">As crises de ansiedades relacionadas ao estresse pós-traumático resultam
-                             da ocorrência de flashbacks e pesadelos que geraram um evento traumático
-                              no passado.
-                        </p>
-                        <strong> <span> Leia mais: https://hospitalsantamonica.com.br/voce-conhece-todos-os-tipos-de-ansiedade-conheca-aqui-e-saiba-como-tratar/</span></strong>
 
-                    </div>
-                    <div class="col-sm-12 col-md-3 mt-5">
-                        <figure>
-                            <img src="../static/imgs/ansiedade2.jpg" width="200" heigth="150" class="ml-5">
-                        </figure>
-                    </div>
-                </div>
+
+    <div id="accordion">
+        <div class="card mt-5">
+            <h1 class="text-left text-dark mt-5 ml-3">
+                Tipos:  
+            </h1>
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0 text-center">
+              <button class="btn btn-link text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Transtorno Obsessivo Compulsivo (TOC)
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body text-center">
+                Ações repetitivas, rituais e manias que temos e 
+                que quando nos prejudicam tornam-se um problema.
             </div>
+          </div>
         </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0 text-center text-dark">
+              <button class="btn btn-link collapsed text-dark" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Transtorno de Ansiedade Generalizada (TAG)
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body text-center">
+                A pessoa não consegue relaxar, pois apresenta preocupação excessiva 
+                com a vida e em relação a tudo que envolve sua rotina muito comum em alunos, professores e profissionais como um todo.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 text-center text-dark">
+              <button class="btn btn-link collapsed text-dark" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Ansiedade por estresse pós-traumático
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body text-center">
+                As crises de ansiedades relacionadas ao estresse pós-traumático resultam
+                da ocorrência de flashbacks e pesadelos que geraram um evento traumático
+                 no passado.
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-5 text-center text-dark">
+                <button class="btn btn-link collapsed text-dark" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Ansiedade por estresse pós-traumático
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body text-center">
+                  As crises de ansiedades relacionadas ao estresse pós-traumático resultam
+                  da ocorrência de flashbacks e pesadelos que geraram um evento traumático
+                   no passado.
+              </div>
+            </div>
+          </div>
     </div>
 
+
+
+     <strong> <span class="mt-5 mb-5 pt-5 pb-5"> Leia mais: https://hospitalsantamonica.com.br/voce-conhece-todos-os-tipos-de-ansiedade-conheca-aqui-e-saiba-como-tratar/</span></strong>
 
 
 
 
     <!--Beginning footer-->
 
-    <footer class="text-dark">
+    <footer class="text-dark mt-5">
 
-        <div class="text-center pt-3"  padding: 20px;" >
+        <div class="text-center pt-5"  padding: 20px;" >
             <p class="text-light pt-3">
                 Criado por: Charles Dantas
             </p>

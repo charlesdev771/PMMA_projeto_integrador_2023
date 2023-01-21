@@ -43,4 +43,4 @@ def treatment():
     return render_template('treatment.html')
 
 if __name__ == '__main__':
-    app.run(port=5151)
+    app.run(port=5152)
